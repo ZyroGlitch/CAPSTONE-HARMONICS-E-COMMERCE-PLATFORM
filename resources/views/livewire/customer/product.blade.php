@@ -22,106 +22,106 @@
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-around align-items-center">
+                <div class="d-flex justify-content-around align-items-start">
                     <div class="col-lg-3 col-md-3">
-                        <div class="card shadow-sm">
-                            <div class="card-header text-center">
-                                <div class="d-flex justify-content-end gap-2">
-                                    <?php
-                                    $i = 5;
-                                    ?>
-                                    @while ($i >= 0)
-                                        <i class="bi bi-star-fill text-warning fs-4"></i>
+                        <div class="card shadow-sm" style="border-radius:15px;">
+                            <div class="card-body bg-light">
+                                <a href="#" class="text-dark" style="text-decoration: none">
+                                    <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                        <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                            class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                    </div>
 
+                                    <h3 class="fw-bold">Product 1</h3>
+
+                                    <div class="d-flex gap-1 mb-3">
                                         <?php
-                                        $i--;
+                                        $i = 5;
                                         ?>
-                                    @endwhile
+                                        @while ($i >= 0)
+                                            <i class="bi bi-star-fill text-warning"></i>
 
-                                </div>
-                                <img src="{{ asset('assets/background2.jpg') }}" alt="image"
-                                    class="object-fit-contain" style="width:200px;height:200px;">
-                            </div>
-                            <div class="card-body bg-dark text-light">
-                                <h2>Product 1</h2>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
+                                            <?php
+                                            $i--;
+                                            ?>
+                                        @endwhile
+                                    </div>
 
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h4>₱2000</h4>
-                                    <h4>20 Left</h4>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="fw-semibold">₱2000</h4>
 
-                                <div class="d-grid">
-                                    <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                                </div>
+                                        <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                                class="bi bi-cart3"></i></a>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3">
-                        <div class="card shadow-sm">
-                            <div class="card-header text-center">
-                                <div class="d-flex justify-content-end gap-2">
-                                    <?php
-                                    $i = 5;
-                                    ?>
-                                    @while ($i >= 0)
-                                        <i class="bi bi-star-fill text-warning fs-4"></i>
+                        <div class="card shadow-sm" style="border-radius:15px;">
+                            <div class="card-body bg-light">
+                                <a href="#" class="text-dark" style="text-decoration: none">
+                                    <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                        <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                            class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                    </div>
 
+                                    <h3 class="fw-bold">Product 1</h3>
+
+                                    <div class="d-flex gap-1 mb-3">
                                         <?php
-                                        $i--;
+                                        $i = 5;
                                         ?>
-                                    @endwhile
+                                        @while ($i >= 0)
+                                            <i class="bi bi-star-fill text-warning"></i>
 
-                                </div>
-                                <img src="{{ asset('assets/background2.jpg') }}" alt="image"
-                                    class="object-fit-contain" style="width:200px;height:200px;">
-                            </div>
-                            <div class="card-body bg-dark text-light">
-                                <h2>Product 1</h2>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
+                                            <?php
+                                            $i--;
+                                            ?>
+                                        @endwhile
+                                    </div>
 
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h4>₱2000</h4>
-                                    <h4>20 Left</h4>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="fw-semibold">₱2000</h4>
 
-                                <div class="d-grid">
-                                    <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                                </div>
+                                        <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                                class="bi bi-cart3"></i></a>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3">
-                        <div class="card shadow-sm">
-                            <div class="card-header text-center">
-                                <div class="d-flex justify-content-end gap-2">
-                                    <?php
-                                    $i = 5;
-                                    ?>
-                                    @while ($i >= 0)
-                                        <i class="bi bi-star-fill text-warning fs-4"></i>
+                        <div class="card shadow-sm" style="border-radius:15px;">
+                            <div class="card-body bg-light">
+                                <a href="#" class="text-dark" style="text-decoration: none">
+                                    <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                        <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                            class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                    </div>
 
+                                    <h3 class="fw-bold">Product 1</h3>
+
+                                    <div class="d-flex gap-1 mb-3">
                                         <?php
-                                        $i--;
+                                        $i = 5;
                                         ?>
-                                    @endwhile
+                                        @while ($i >= 0)
+                                            <i class="bi bi-star-fill text-warning"></i>
 
-                                </div>
-                                <img src="{{ asset('assets/background2.jpg') }}" alt="image"
-                                    class="object-fit-contain" style="width:200px;height:200px;">
-                            </div>
-                            <div class="card-body bg-dark text-light">
-                                <h2>Product 1</h2>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
+                                            <?php
+                                            $i--;
+                                            ?>
+                                        @endwhile
+                                    </div>
 
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h4>₱2000</h4>
-                                    <h4>20 Left</h4>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="fw-semibold">₱2000</h4>
 
-                                <div class="d-grid">
-                                    <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                                </div>
+                                        <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                                class="bi bi-cart3"></i></a>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

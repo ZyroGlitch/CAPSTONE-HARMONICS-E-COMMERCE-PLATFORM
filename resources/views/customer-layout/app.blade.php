@@ -4,7 +4,7 @@
             wire:navigate>
             <img src="{{ asset('assets/logo.png') }}" alt="Harmonics" class="object-fit-contain rounded-pill me-3"
                 style="width:50px;height:50px;">
-            HARMONICS
+            <span class="text-success">HARMONICS</span>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -33,7 +33,8 @@
                 </li>
             </ul>
 
-            <a wire:navigate href="#" class="btn btn-outline-dark fw-bold logout">LOGIN</a>
+            <a wire:navigate href="{{ route('customer.login') }}"
+                class="btn btn-outline-success fw-bold logout">LOGIN</a>
         </div>
     </div>
 </nav>

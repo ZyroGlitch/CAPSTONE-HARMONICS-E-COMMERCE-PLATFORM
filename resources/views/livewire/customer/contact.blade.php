@@ -30,7 +30,7 @@
             </div>
 
             <div class="d-grid mb-5">
-                <button class="btn btn-success btn-lg">Submit</button>
+                <button class="btn btn-success btn-lg fw-semibold">Submit</button>
             </div>
 
             <p>By clicking Submit you agree that Harmonics can process your personal data as required for the

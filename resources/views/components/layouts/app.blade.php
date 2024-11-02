@@ -32,6 +32,18 @@
             margin: 0;
         }
 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
         /* SWIPER JS */
         swiper-container {
             width: 100%;
@@ -101,13 +113,30 @@
         .footer {
             background: url("{{ asset('assets/background2.jpg') }}") center center / cover no-repeat;
         }
+
+        /* LOGIN WAVE BACKGROUND */
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: block;
+            background-color: #0e4166;
+            background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
+        }
     </style>
 </head>
 
 <body class="bg-light">
-    @include('customer-layout.app')
+    @if (request()->is('login') || request()->is('signUp'))
+        {{ $slot }}
+    @else
+        @include('customer-layout.app')
 
-    {{ $slot }}
+        {{ $slot }}
+    @endif
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <div class="container-fluid h-100 p-0">
-    <section class="vh-100">
+    <section class="vh-100 py-5">
         <div class="container d-flex justify-content-center align-items-center mb-5">
             <div class="col-lg-6 col-md-6 text-center">
                 <img src="{{ asset('assets/photo1.png') }}" alt="photo" class="object-fit-contain"
@@ -7,29 +7,29 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="text-center mb-4">
-                    <h1 class="fw-bold">Keep Fit and Strum</h1>
-                    <h2 class="fw-bold">the Beat of your Heart Strings.</h2>
-                    <h5>Shop the best intruments and</h5>
-                    <h5>gear at Harmonics today.</h5>
+                    <h1 class="fw-bold display-6 mb-3">Keep Fit and Strum the Beat of your Heart Strings.</h1>
+                    <h4>Shop the best intruments and gear at Harmonics today.</h4>
                 </div>
 
                 <div class="d-flex justify-content-evenly align-items-center">
                     <div class="col-lg-5 col-md-5">
                         <div class="d-grid">
-                            <a href="#" type="button" class="btn btn-outline-primary btn-lg rounded-pill">Learn
+                            <a href="#" type="button"
+                                class="btn btn-outline-success btn-lg rounded-pill shadow-sm">Learn
                                 More</a>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-5">
                         <div class="d-grid">
-                            <a href="#" type="button" class="btn btn-primary btn-lg rounded-pill">Buy Now</a>
+                            <a href="#" type="button" class="btn btn-success btn-lg rounded-pill shadow-sm">Buy
+                                Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div
-            class="container-fluid d-flex justify-content-around align-items-center border border-1 border-dark border-start-0 border-end-0 p-3">
+            class="container-fluid d-flex justify-content-around align-items-center border border-1 border-dark border-start-0 border-end-0 shadow p-3">
             <h3>Yamaha</h3>
             <h3>Fenders</h3>
             <h3>Pearl</h3>
@@ -40,9 +40,12 @@
         </div>
     </section>
 
-    <section class="container-fluid vh-100 px-5" style="margin-bottom: 6rem;">
-        <h2 class="fw-bold">Best Sellers</h2>
-        <h5>Get yours now!</h5>
+    <section class="container-fluid vh-100 p-5 mb-5">
+        <div class="mb-3">
+            <h2 class="text-success fw-bold display-5">Best Sellers</h2>
+            <h4>Get yours now!</h4>
+        </div>
+
 
         <div>
             <swiper-container style="--swiper-navigation-color: black; --swiper-pagination-color: black"
@@ -52,304 +55,304 @@
                 </div>
 
                 <swiper-slide class="d-flex justify-content-between align-items-center gap-5">
-                    <div class="card shadow-sm">
-                        <div class="card-header text-center py-3">
-                            <div class="d-flex justify-content-end gap-2 mb-3">
-                                <?php
-                                $i = 5;
-                                ?>
-                                @while ($i >= 0)
-                                    <i class="bi bi-star-fill text-warning fs-4"></i>
+                    <div class="card shadow-sm w-100" style="border-radius:15px;">
+                        <div class="card-body bg-light">
+                            <a href="#" class="text-dark" style="text-decoration: none">
+                                <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                    <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                        class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                </div>
 
+                                <h3 class="fw-bold">Product 1</h3>
+
+                                <div class="d-flex gap-1 mb-3">
                                     <?php
-                                    $i--;
+                                    $i = 5;
                                     ?>
-                                @endwhile
+                                    @while ($i >= 0)
+                                        <i class="bi bi-star-fill text-warning"></i>
 
-                            </div>
-                            <img src="{{ asset('assets/logo.png') }}" alt="" class="object-fit-contain"
-                                style="width:200px;height:200px;">
-                        </div>
-                        <div class="card-body bg-dark text-light">
-                            <h2>Product 1</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
+                                        <?php
+                                        $i--;
+                                        ?>
+                                    @endwhile
+                                </div>
 
-                            <div class="d-flex justify-content-between mb-3">
-                                <h4>₱2000</h4>
-                                <h4>20 Left</h4>
-                            </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-semibold">₱2000</h4>
 
-                            <div class="d-grid">
-                                <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                            </div>
+                                    <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                            class="bi bi-cart3"></i></a>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="card shadow-sm">
-                        <div class="card-header text-center py-3">
-                            <div class="d-flex justify-content-end gap2 mb-3">
-                                <?php
-                                $i = 5;
-                                ?>
-                                @while ($i >= 0)
-                                    <i class="bi bi-star-fill text-warning fs-4"></i>
+                    <div class="card shadow-sm w-100" style="border-radius:15px;">
+                        <div class="card-body bg-light">
+                            <a href="#" class="text-dark" style="text-decoration: none">
+                                <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                    <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                        class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                </div>
 
+                                <h3 class="fw-bold">Product 1</h3>
+
+                                <div class="d-flex gap-1 mb-3">
                                     <?php
-                                    $i--;
+                                    $i = 5;
                                     ?>
-                                @endwhile
+                                    @while ($i >= 0)
+                                        <i class="bi bi-star-fill text-warning"></i>
 
-                            </div>
-                            <img src="{{ asset('assets/logo.png') }}" alt="" class="object-fit-contain"
-                                style="width:200px;height:200px;">
-                        </div>
-                        <div class="card-body bg-dark text-light">
-                            <h2>Product 1</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
+                                        <?php
+                                        $i--;
+                                        ?>
+                                    @endwhile
+                                </div>
 
-                            <div class="d-flex justify-content-between mb-3">
-                                <h4>₱2000</h4>
-                                <h4>20 Left</h4>
-                            </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-semibold">₱2000</h4>
 
-                            <div class="d-grid">
-                                <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                            </div>
+                                    <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                            class="bi bi-cart3"></i></a>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="card shadow-sm">
-                        <div class="card-header text-center py-3">
-                            <div class="d-flex justify-content-end gap-2 mb-3">
-                                <?php
-                                $i = 5;
-                                ?>
-                                @while ($i >= 0)
-                                    <i class="bi bi-star-fill text-warning fs-4"></i>
+                    <div class="card shadow-sm w-100" style="border-radius:15px;">
+                        <div class="card-body bg-light">
+                            <a href="#" class="text-dark" style="text-decoration: none">
+                                <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                    <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                        class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                </div>
 
+                                <h3 class="fw-bold">Product 1</h3>
+
+                                <div class="d-flex gap-1 mb-3">
                                     <?php
-                                    $i--;
+                                    $i = 5;
                                     ?>
-                                @endwhile
+                                    @while ($i >= 0)
+                                        <i class="bi bi-star-fill text-warning"></i>
 
-                            </div>
-                            <img src="{{ asset('assets/logo.png') }}" alt="" class="object-fit-contain"
-                                style="width:200px;height:200px;">
-                        </div>
-                        <div class="card-body bg-dark text-light">
-                            <h2>Product 1</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
+                                        <?php
+                                        $i--;
+                                        ?>
+                                    @endwhile
+                                </div>
 
-                            <div class="d-flex justify-content-between mb-3">
-                                <h4>₱2000</h4>
-                                <h4>20 Left</h4>
-                            </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-semibold">₱2000</h4>
 
-                            <div class="d-grid">
-                                <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </swiper-slide>
-
-                <swiper-slide class="d-flex justify-content-between align-items-center gap-5">
-                    <div class="card shadow-sm">
-                        <div class="card-header text-center py-3">
-                            <div class="d-flex justify-content-end gap-2 mb-3">
-                                <?php
-                                $i = 5;
-                                ?>
-                                @while ($i >= 0)
-                                    <i class="bi bi-star-fill text-warning fs-4"></i>
-
-                                    <?php
-                                    $i--;
-                                    ?>
-                                @endwhile
-
-                            </div>
-                            <img src="{{ asset('assets/logo.png') }}" alt="" class="object-fit-contain"
-                                style="width:200px;height:200px;">
-                        </div>
-                        <div class="card-body bg-dark text-light">
-                            <h2>Product 1</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
-
-                            <div class="d-flex justify-content-between mb-3">
-                                <h4>₱2000</h4>
-                                <h4>20 Left</h4>
-                            </div>
-
-                            <div class="d-grid">
-                                <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card shadow-sm">
-                        <div class="card-header text-center py-3">
-                            <div class="d-flex justify-content-end gap2 mb-3">
-                                <?php
-                                $i = 5;
-                                ?>
-                                @while ($i >= 0)
-                                    <i class="bi bi-star-fill text-warning fs-4"></i>
-
-                                    <?php
-                                    $i--;
-                                    ?>
-                                @endwhile
-
-                            </div>
-                            <img src="{{ asset('assets/logo.png') }}" alt="" class="object-fit-contain"
-                                style="width:200px;height:200px;">
-                        </div>
-                        <div class="card-body bg-dark text-light">
-                            <h2>Product 1</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
-
-                            <div class="d-flex justify-content-between mb-3">
-                                <h4>₱2000</h4>
-                                <h4>20 Left</h4>
-                            </div>
-
-                            <div class="d-grid">
-                                <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card shadow-sm">
-                        <div class="card-header text-center py-3">
-                            <div class="d-flex justify-content-end gap-2 mb-3">
-                                <?php
-                                $i = 5;
-                                ?>
-                                @while ($i >= 0)
-                                    <i class="bi bi-star-fill text-warning fs-4"></i>
-
-                                    <?php
-                                    $i--;
-                                    ?>
-                                @endwhile
-
-                            </div>
-                            <img src="{{ asset('assets/logo.png') }}" alt="" class="object-fit-contain"
-                                style="width:200px;height:200px;">
-                        </div>
-                        <div class="card-body bg-dark text-light">
-                            <h2>Product 1</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
-
-                            <div class="d-flex justify-content-between mb-3">
-                                <h4>₱2000</h4>
-                                <h4>20 Left</h4>
-                            </div>
-
-                            <div class="d-grid">
-                                <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                            </div>
+                                    <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                            class="bi bi-cart3"></i></a>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </swiper-slide>
 
                 <swiper-slide class="d-flex justify-content-between align-items-center gap-5">
-                    <div class="card shadow-sm">
-                        <div class="card-header text-center py-3">
-                            <div class="d-flex justify-content-end gap-2 mb-3">
-                                <?php
-                                $i = 5;
-                                ?>
-                                @while ($i >= 0)
-                                    <i class="bi bi-star-fill text-warning fs-4"></i>
+                    <div class="card shadow-sm w-100" style="border-radius:15px;">
+                        <div class="card-body bg-light">
+                            <a href="#" class="text-dark" style="text-decoration: none">
+                                <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                    <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                        class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                </div>
 
+                                <h3 class="fw-bold">Product 1</h3>
+
+                                <div class="d-flex gap-1 mb-3">
                                     <?php
-                                    $i--;
+                                    $i = 5;
                                     ?>
-                                @endwhile
+                                    @while ($i >= 0)
+                                        <i class="bi bi-star-fill text-warning"></i>
 
-                            </div>
-                            <img src="{{ asset('assets/logo.png') }}" alt="" class="object-fit-contain"
-                                style="width:200px;height:200px;">
-                        </div>
-                        <div class="card-body bg-dark text-light">
-                            <h2>Product 1</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
+                                        <?php
+                                        $i--;
+                                        ?>
+                                    @endwhile
+                                </div>
 
-                            <div class="d-flex justify-content-between mb-3">
-                                <h4>₱2000</h4>
-                                <h4>20 Left</h4>
-                            </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-semibold">₱2000</h4>
 
-                            <div class="d-grid">
-                                <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                            </div>
+                                    <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                            class="bi bi-cart3"></i></a>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="card shadow-sm">
-                        <div class="card-header text-center py-3">
-                            <div class="d-flex justify-content-end gap2 mb-3">
-                                <?php
-                                $i = 5;
-                                ?>
-                                @while ($i >= 0)
-                                    <i class="bi bi-star-fill text-warning fs-4"></i>
+                    <div class="card shadow-sm w-100" style="border-radius:15px;">
+                        <div class="card-body bg-light">
+                            <a href="#" class="text-dark" style="text-decoration: none">
+                                <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                    <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                        class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                </div>
 
+                                <h3 class="fw-bold">Product 1</h3>
+
+                                <div class="d-flex gap-1 mb-3">
                                     <?php
-                                    $i--;
+                                    $i = 5;
                                     ?>
-                                @endwhile
+                                    @while ($i >= 0)
+                                        <i class="bi bi-star-fill text-warning"></i>
 
-                            </div>
-                            <img src="{{ asset('assets/logo.png') }}" alt="" class="object-fit-contain"
-                                style="width:200px;height:200px;">
-                        </div>
-                        <div class="card-body bg-dark text-light">
-                            <h2>Product 1</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
+                                        <?php
+                                        $i--;
+                                        ?>
+                                    @endwhile
+                                </div>
 
-                            <div class="d-flex justify-content-between mb-3">
-                                <h4>₱2000</h4>
-                                <h4>20 Left</h4>
-                            </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-semibold">₱2000</h4>
 
-                            <div class="d-grid">
-                                <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                            </div>
+                                    <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                            class="bi bi-cart3"></i></a>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="card shadow-sm">
-                        <div class="card-header text-center py-3">
-                            <div class="d-flex justify-content-end gap-2 mb-3">
-                                <?php
-                                $i = 5;
-                                ?>
-                                @while ($i >= 0)
-                                    <i class="bi bi-star-fill text-warning fs-4"></i>
+                    <div class="card shadow-sm w-100" style="border-radius:15px;">
+                        <div class="card-body bg-light">
+                            <a href="#" class="text-dark" style="text-decoration: none">
+                                <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                    <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                        class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                </div>
 
+                                <h3 class="fw-bold">Product 1</h3>
+
+                                <div class="d-flex gap-1 mb-3">
                                     <?php
-                                    $i--;
+                                    $i = 5;
                                     ?>
-                                @endwhile
+                                    @while ($i >= 0)
+                                        <i class="bi bi-star-fill text-warning"></i>
 
-                            </div>
-                            <img src="{{ asset('assets/logo.png') }}" alt="" class="object-fit-contain"
-                                style="width:200px;height:200px;">
+                                        <?php
+                                        $i--;
+                                        ?>
+                                    @endwhile
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-semibold">₱2000</h4>
+
+                                    <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                            class="bi bi-cart3"></i></a>
+                                </div>
+                            </a>
                         </div>
-                        <div class="card-body bg-dark text-light">
-                            <h2>Product 1</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, libero.</p>
+                    </div>
+                </swiper-slide>
 
-                            <div class="d-flex justify-content-between mb-3">
-                                <h4>₱2000</h4>
-                                <h4>20 Left</h4>
-                            </div>
+                <swiper-slide class="d-flex justify-content-between align-items-center gap-5">
+                    <div class="card shadow-sm w-100" style="border-radius:15px;">
+                        <div class="card-body bg-light">
+                            <a href="#" class="text-dark" style="text-decoration: none">
+                                <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                    <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                        class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                </div>
 
-                            <div class="d-grid">
-                                <a href="#" class="btn btn-light fw-bold">Buy Now</a>
-                            </div>
+                                <h3 class="fw-bold">Product 1</h3>
+
+                                <div class="d-flex gap-1 mb-3">
+                                    <?php
+                                    $i = 5;
+                                    ?>
+                                    @while ($i >= 0)
+                                        <i class="bi bi-star-fill text-warning"></i>
+
+                                        <?php
+                                        $i--;
+                                        ?>
+                                    @endwhile
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-semibold">₱2000</h4>
+
+                                    <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                            class="bi bi-cart3"></i></a>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm w-100" style="border-radius:15px;">
+                        <div class="card-body bg-light">
+                            <a href="#" class="text-dark" style="text-decoration: none">
+                                <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                    <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                        class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                </div>
+
+                                <h3 class="fw-bold">Product 1</h3>
+
+                                <div class="d-flex gap-1 mb-3">
+                                    <?php
+                                    $i = 5;
+                                    ?>
+                                    @while ($i >= 0)
+                                        <i class="bi bi-star-fill text-warning"></i>
+
+                                        <?php
+                                        $i--;
+                                        ?>
+                                    @endwhile
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-semibold">₱2000</h4>
+
+                                    <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                            class="bi bi-cart3"></i></a>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm w-100" style="border-radius:15px;">
+                        <div class="card-body bg-light">
+                            <a href="#" class="text-dark" style="text-decoration: none">
+                                <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                    <img src="{{ asset('assets/basketball.png') }}" alt="image"
+                                        class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                </div>
+
+                                <h3 class="fw-bold">Product 1</h3>
+
+                                <div class="d-flex gap-1 mb-3">
+                                    <?php
+                                    $i = 5;
+                                    ?>
+                                    @while ($i >= 0)
+                                        <i class="bi bi-star-fill text-warning"></i>
+
+                                        <?php
+                                        $i--;
+                                        ?>
+                                    @endwhile
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-semibold">₱2000</h4>
+
+                                    <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
+                                            class="bi bi-cart3"></i></a>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </swiper-slide>
