@@ -53,28 +53,29 @@
                             </h6>
                         </div>
 
-                        <form action="#" method="POST">
+                        <form wire:submit='store' method="POST">
                             @csrf
 
                             <div class="d-flex gap-3 mb-4">
-                                <input type="text" class="form-control shadow-sm w-100" placeholder="Firstname"
-                                    required>
+                                <input wire:model='firstname' type="text" class="form-control shadow-sm w-100"
+                                    placeholder="Firstname" required>
 
-                                <input type="text" class="form-control shadow-sm w-100" placeholder="Lastname"
-                                    required>
+                                <input wire:model='lastname' type="text" class="form-control shadow-sm w-100"
+                                    placeholder="Lastname" required>
                             </div>
 
-                            <input type="text" class="form-control shadow-sm mb-4" placeholder="Contact Number"
-                                required>
+                            <input wire:model='contact_number' type="text" class="form-control shadow-sm mb-4"
+                                placeholder="Contact Number" required>
 
-                            <input type="text" class="form-control shadow-sm mb-4" placeholder="Address" required>
+                            <input wire:model='address' type="text" class="form-control shadow-sm mb-4"
+                                placeholder="Address" required>
 
-                            <input type="email" class="form-control shadow-sm mb-4" placeholder="Email Address"
-                                required>
+                            <input wire:model='email' type="email" class="form-control shadow-sm mb-4"
+                                placeholder="Email Address" required>
 
                             <div class="input-group shadow-sm mb-4">
-                                <input type="password" class="form-control" id="password" placeholder="Password"
-                                    required>
+                                <input wire:model='password' type="password" class="form-control" id="password"
+                                    placeholder="Password" required>
                                 <span class="input-group-text" onclick="togglePassword()" style="cursor: pointer;">
                                     <i class="bi bi-eye-slash" id="toggleEye"></i>
                                 </span>

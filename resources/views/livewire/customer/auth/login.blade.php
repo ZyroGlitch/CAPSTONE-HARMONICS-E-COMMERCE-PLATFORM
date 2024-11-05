@@ -41,19 +41,19 @@
                         <h4 class="text-success fw-bold">HARMONICS</h4>
                     </div>
 
-                    <form action="#" method="POST">
+                    <form wire:submit='login' method="POST">
                         @csrf
 
                         <label for="email" class="form-label">Email</label>
                         <div class="input-group mb-3">
                             <span class="input-group-text"><i class="bi bi-envelope-at-fill"></i></span>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <input wire:model='email' type="email" class="form-control" id="email" required>
                         </div>
 
                         <label for="password" class="form-label">Password</label>
                         <div class="input-group mb-2">
                             <span class="input-group-text"><i class="bi bi-shield-lock-fill"></i></span>
-                            <input type="password" class="form-control" id="password" name="password" required>
+                            <input wire:model='password' type="password" class="form-control" id="password" required>
                             <span class="input-group-text">
                                 <i class="bi bi-eye-slash" id="togglePassword" style="cursor: pointer;"></i>
                             </span>

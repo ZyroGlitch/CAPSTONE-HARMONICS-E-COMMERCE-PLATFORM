@@ -25,6 +25,9 @@
     {{-- SweetJsAlert2 CDN --}}
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- FontAwesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <style>
         body {
             font-family: "Montserrat", sans-serif;
@@ -130,13 +133,47 @@
 </head>
 
 <body class="bg-light">
-    @if (request()->is('login') || request()->is('signUp'))
-        {{ $slot }}
-    @else
+    @if (request()->is('/') || request()->is('product') || request()->is('about') || request()->is('contact'))
         @include('customer-layout.app')
-
-        {{ $slot }}
     @endif
+
+    @if (request()->is('dashboard') ||
+            request()->is('orders') ||
+            request()->is('messages') ||
+            request()->is('location') ||
+            request()->is('cart') ||
+            request()->is('notification') ||
+            request()->is('profile'))
+        @include('customer-layout.customer_login')
+    @endif
+
+    {{ $slot }}
+
+
+    @if (session('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    icon: 'success',
+                    title: '{{ session('success') }}',
+                    text: '{{ session('message') }}',
+                });
+            });
+        </script>
+    @endif
+
+    @if (session('error'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    icon: 'error',
+                    title: '{{ session('error') }}',
+                    text: '{{ session('message') }}',
+                });
+            });
+        </script>
+    @endif
+
 </body>
 
 </html>
