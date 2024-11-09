@@ -73,21 +73,6 @@
             background-position: center;
         }
 
-        /* swiper-slide .title {
-            font-size: 41px;
-            font-weight: 300;
-        } */
-
-        /* swiper-slide .subtitle {
-            font-size: 21px;
-        } */
-
-        /* swiper-slide .text {
-            font-size: 14px;
-            max-width: 400px;
-            line-height: 1.3;
-        } */
-
         .footer {
             position: relative;
             color: #fff;
@@ -129,6 +114,80 @@
             background-color: #0e4166;
             background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
         }
+
+        /* Sidebar styling */
+        .wrapper {
+            display: flex;
+        }
+
+        #sidebar {
+            min-width: 250px;
+            background: #7386D5;
+            color: black;
+            transition: all 0.3s;
+        }
+
+        #sidebar li {
+            list-style-type: none;
+        }
+
+
+        #sidebar.active {
+            margin-left: -250px;
+        }
+
+        #content {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -250px;
+            }
+
+            #sidebar {
+                margin-left: 0;
+            }
+
+            #sidebarCollapse {
+                display: none;
+            }
+        }
+
+        .nav-button {
+            width: 100%;
+            color: black;
+            background: white;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        .nav-button:hover {
+            color: white;
+            background: black;
+        }
+
+        /* Active class for the current page */
+        .current {
+            color: white;
+            background: black;
+        }
+
+
+        /* Add transition effect for icon */
+        #toggleIcon {
+            transition: transform 0.3s ease;
+        }
+
+        #sidebar.active #toggleIcon {
+            transform: rotate(90deg);
+            /* Rotate the icon when the sidebar is active */
+        }
     </style>
 </head>
 
@@ -149,31 +208,62 @@
 
     {{ $slot }}
 
-
-    @if (session('success'))
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                Swal.fire({
-                    icon: 'success',
-                    title: '{{ session('success') }}',
-                    text: '{{ session('message') }}',
-                });
-            });
-        </script>
-    @endif
-
-    @if (session('error'))
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                Swal.fire({
-                    icon: 'error',
-                    title: '{{ session('error') }}',
-                    text: '{{ session('message') }}',
-                });
-            });
-        </script>
-    @endif
-
 </body>
+
+@if (session('success'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                icon: 'success',
+                title: '{{ session('success') }}',
+                text: '{{ session('message') }}',
+            });
+        });
+    </script>
+@endif
+
+@if (session('error'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                icon: 'error',
+                title: '{{ session('error') }}',
+                text: '{{ session('message') }}',
+            });
+        });
+    </script>
+@endif
+
+<!-- Script to toggle sidebar -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the sidebar collapse button
+        const sidebarCollapse = document.getElementById('sidebarCollapse');
+        // Get the sidebar element
+        const sidebar = document.getElementById('sidebar');
+        // Get the toggle icon
+        const toggleIcon = document.getElementById('toggleIcon');
+
+        // Add click event listener to toggle the sidebar
+        sidebarCollapse.addEventListener('click', function() {
+            // Toggle 'active' class on the sidebar
+            sidebar.classList.toggle('active');
+
+            // Change icon based on sidebar state
+            if (sidebar.classList.contains('active')) {
+                toggleIcon.classList.remove('bi-list');
+                toggleIcon.classList.add('bi-x');
+            } else {
+                toggleIcon.classList.remove('bi-x');
+                toggleIcon.classList.add('bi-list');
+            }
+        });
+    });
+
+
+    document.addEventListener('clear-file-input', function() {
+        document.querySelector('#product-name').value = null;
+    });
+</script>
 
 </html>

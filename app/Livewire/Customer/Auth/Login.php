@@ -18,7 +18,16 @@ class Login extends Component
         if($user && Hash::check($this->password, $user->password)){
             Session::put('userID',$user->userID);
 
-            $this->redirectRoute('customer-login.dashboard');
+            switch($user->role){
+                case 'Customer':
+                    $this->redirectRoute('customer-login.dashboard');
+                    break;
+
+                case 'Admin':
+                    $this->redirectRoute('admin.admin-dashboard');
+                    break;
+            }
+
         }else{
             session()->flash('error','Incorrect Username or Password!');
 
