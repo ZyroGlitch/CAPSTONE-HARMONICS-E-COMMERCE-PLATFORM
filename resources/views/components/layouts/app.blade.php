@@ -178,7 +178,6 @@
             background: black;
         }
 
-
         /* Add transition effect for icon */
         #toggleIcon {
             transition: transform 0.3s ease;
@@ -187,6 +186,30 @@
         #sidebar.active #toggleIcon {
             transform: rotate(90deg);
             /* Rotate the icon when the sidebar is active */
+        }
+
+        /* Active class for the current page */
+        .customer-nav-current {
+            color: #198754;
+        }
+
+        /* Grid in Customer Products */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth animation */
+        }
+
+        .card-hover:hover {
+            transform: scale(1.05);
+            /* Scales the card to 105% of its original size */
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            /* Increases the shadow for a pop-out effect */
         }
     </style>
 </head>
@@ -197,6 +220,7 @@
     @endif
 
     @if (request()->is('dashboard') ||
+            request()->is('dashboard/view') ||
             request()->is('orders') ||
             request()->is('messages') ||
             request()->is('location') ||

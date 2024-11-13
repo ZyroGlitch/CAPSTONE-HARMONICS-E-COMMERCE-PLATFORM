@@ -1,25 +1,26 @@
 <?php
 
-use App\Livewire\Admin\AdminCustomers;
-use App\Livewire\Admin\AdminMessages;
-use App\Livewire\Admin\AdminOrders;
-use App\Livewire\Admin\AdminProduct;
-use App\Livewire\Admin\AdminProfile;
-use App\Livewire\Admin\AdminSalesReport;
 use App\Livewire\Index;
 use App\Livewire\Customer\About;
 use App\Livewire\Customer\Contact;
 use App\Livewire\Customer\Product;
+use App\Livewire\Admin\AdminOrders;
+use App\Livewire\Admin\AdminProduct;
+use App\Livewire\Admin\AdminProfile;
 use App\Livewire\CustomerLogin\Cart;
+use App\Livewire\Admin\AdminMessages;
 use App\Livewire\Customer\Auth\Login;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Admin\AdminCustomers;
 use App\Livewire\Admin\AdminDashboard;
 use App\Livewire\Customer\Auth\SignUp;
 use App\Livewire\CustomerLogin\Orders;
 use App\Livewire\CustomerLogin\Profile;
+use App\Livewire\Admin\AdminSalesReport;
 use App\Livewire\CustomerLogin\Location;
 use App\Livewire\CustomerLogin\Messages;
 use App\Livewire\CustomerLogin\Dashboard;
+use App\Livewire\CustomerLogin\ViewProduct;
 use App\Http\Controllers\CustomerController;
 use App\Livewire\CustomerLogin\Notification;
 
@@ -50,6 +51,9 @@ Route::middleware('customer')->group(function () {
     // Routes For Authenticated Customer
     Route::get('/dashboard', Dashboard::class)
     ->name('customer-login.dashboard');
+
+    Route::get('/dashboard/view', ViewProduct::class)
+    ->name('dashboard.view');
 
     Route::get('/orders', Orders::class)
     ->name('customer-login.orders');

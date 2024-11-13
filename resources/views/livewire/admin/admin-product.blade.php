@@ -35,7 +35,7 @@
                     <div class="card-body">
                         <h5 class="mb-3">Preview Image</h5>
 
-                        <div class="text-center bg-secondary rounded shadow-sm mb-3">
+                        <div class="text-center bg-light mb-3">
                             @if ($image)
                                 <img src="{{ $image->temporaryUrl() }}" alt="image" class="object-fit-contain"
                                     style="width:200px;height:200px;">

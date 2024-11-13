@@ -23,10 +23,10 @@ class AdminProduct extends Component
             $imageName = time() . '.' . $this->image->extension();
 
             // Store the image in the 'public/uploads' directory
-            $this->image->storeAs('products', $imageName, 'public');
+            $this->image->storeAs('uploads/products/', $imageName, 'public');
 
             // Set $imagePath to the relative path to the image for storing in the database
-            $imagePath = 'uploads/' . $imageName;
+            $imagePath = $imageName;
         }
     
         $store = Product::create([

@@ -1,8 +1,8 @@
 <div class="container-fluid text-dark h-100">
     <section class="container-fluid">
         <div class="d-flex justify-content-center align-items-center h-100 py-5">
-            <div class="col-lg-12 col-md-12">
-                <div class="d-flex align-items-center gap-5 mb-5 ps-5">
+            <div class="col-lg-11 col-md-11">
+                <div class="d-flex align-items-center gap-5 mb-5">
                     <div>
                         <label for="category" class="form-label">Select Category</label>
                         <select class="form-select shadow-sm" id="category" style="width:250px;">
@@ -22,24 +22,19 @@
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-around align-items-start">
-                    <div class="col-lg-3 col-md-3">
-                        <div class="card shadow-sm" style="border-radius:15px;">
+                <div class="grid-container">
+                    @forelse ($products as $product)
+                        <div class="card shadow-sm rounded card-hover">
                             <div class="card-body bg-light">
-                                <a href="#" class="text-dark" style="text-decoration: none">
-                                    <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
-                                        <img src="{{ asset('assets/basketball.png') }}" alt="image"
-                                            class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
-                                    </div>
+                                <form wire:submit.prevent='passData' method="post">
+                                    @csrf
 
-                                    <h3 class="fw-bold">Product 1</h3>
-
-                                    <div class="d-flex gap-1 mb-3">
+                                    <div class="d-flex gap-1 mb-2">
                                         <?php
                                         $i = 5;
                                         ?>
                                         @while ($i >= 0)
-                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning fs-5"></i>
 
                                             <?php
                                             $i--;
@@ -47,84 +42,30 @@
                                         @endwhile
                                     </div>
 
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h4 class="fw-semibold">₱2000</h4>
-
-                                        <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
-                                                class="bi bi-cart3"></i></a>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="card shadow-sm" style="border-radius:15px;">
-                            <div class="card-body bg-light">
-                                <a href="#" class="text-dark" style="text-decoration: none">
-                                    <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
-                                        <img src="{{ asset('assets/basketball.png') }}" alt="image"
-                                            class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
+                                    <div class="text-center py-2 mb-4" style="background:#dfdfdf;border-radius:15px;">
+                                        <img src="{{ Storage::url('uploads/products/' . $product->image) }}"
+                                            alt="image" class="object-fit-contain rounded-lg"
+                                            style="width:200px;height:200px;">
                                     </div>
 
-                                    <h3 class="fw-bold">Product 1</h3>
+                                    <h3 class="fw-bold mb-2">{{ $product->name }}</h3>
 
-                                    <div class="d-flex gap-1 mb-3">
-                                        <?php
-                                        $i = 5;
-                                        ?>
-                                        @while ($i >= 0)
-                                            <i class="bi bi-star-fill text-warning"></i>
-
-                                            <?php
-                                            $i--;
-                                            ?>
-                                        @endwhile
-                                    </div>
+                                    <h6 class="mb-2">Stock Available: {{ $product->stock }}</h6>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h4 class="fw-semibold">₱2000</h4>
+                                        <h4 class="fw-semibold">₱{{ $product->price }}</h4>
 
-                                        <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
-                                                class="bi bi-cart3"></i></a>
+                                        <button type="submit" wire:click="$set('key', '{{ $product->productID }}')"
+                                            class="btn btn-success btn-lg rounded-lg fw-bold">
+                                            <i class="bi bi-cart3"></i>
+                                        </button>
                                     </div>
-                                </a>
+                                </form>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="card shadow-sm" style="border-radius:15px;">
-                            <div class="card-body bg-light">
-                                <a href="#" class="text-dark" style="text-decoration: none">
-                                    <div class="text-center mb-4" style="background:#dfdfdf;border-radius:15px;">
-                                        <img src="{{ asset('assets/basketball.png') }}" alt="image"
-                                            class="object-fit-contain rounded-lg" style="width:200px;height:200px;">
-                                    </div>
-
-                                    <h3 class="fw-bold">Product 1</h3>
-
-                                    <div class="d-flex gap-1 mb-3">
-                                        <?php
-                                        $i = 5;
-                                        ?>
-                                        @while ($i >= 0)
-                                            <i class="bi bi-star-fill text-warning"></i>
-
-                                            <?php
-                                            $i--;
-                                            ?>
-                                        @endwhile
-                                    </div>
-
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h4 class="fw-semibold">₱2000</h4>
-
-                                        <a href="#" class="btn btn-success btn-lg rounded-lg fw-bold"><i
-                                                class="bi bi-cart3"></i></a>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                        <h2>No Product Exist!</h2>
+                    @endforelse
                 </div>
             </div>
         </div>
