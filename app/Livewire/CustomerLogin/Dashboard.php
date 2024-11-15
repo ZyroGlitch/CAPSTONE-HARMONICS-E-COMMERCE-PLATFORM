@@ -4,23 +4,25 @@ namespace App\Livewire\CustomerLogin;
 
 use App\Models\Product;
 use Livewire\Component;
+use Illuminate\Support\Facades\Session;
 
 class Dashboard extends Component
 {
     public $key;
-    public function passData(){
-        $data = Product::where('productID',$this->key)->first();
+    public $data;
 
-        // Optionally use a method to refresh another component
-        $this->emit('productSelected', $this->data);
+    public function passData()
+    {
+        Session::put('productID',$this->key);
 
-        return redirect()->route('dashboard.view',);
+        return redirect()->route('dashboard.view');
     }
-    
+
     public function render()
     {
+        // Get all products for display
         $products = Product::all();
-        
-        return view('livewire.customer-login.dashboard',compact('products'));
+
+        return view('livewire.customer-login.dashboard', compact('products'));
     }
 }
