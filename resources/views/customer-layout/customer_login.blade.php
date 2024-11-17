@@ -15,12 +15,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-5">
                 <li class="nav-item">
-                    <a class="nav-link fs-5 fw-bold @if (request()->is('dashboard') || request()->is('dashboard/view')) customer-nav-current @endif"
+                    <a wire:navigate
+                        class="nav-link fs-5 fw-bold @if (request()->is('dashboard') || request()->is('dashboard/view') || request()->is('dashboard/checkout')) customer-nav-current @endif"
                         href="{{ route('customer-login.dashboard') }}" @class([
                             'customer-nav-current' =>
-                                request()->is('/dashboard') || request()->is('/dashboard/view'),
-                        ])
-                        wire:navigate>DASHBOARD</a>
+                                request()->is('/dashboard') ||
+                                request()->is('/dashboard/view') ||
+                                request()->is('/dashboard/checkout'),
+                        ])>DASHBOARD</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fs-5 fw-bold @if (request()->is('orders')) customer-nav-current @endif"

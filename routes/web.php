@@ -17,6 +17,7 @@ use App\Livewire\Customer\Auth\SignUp;
 use App\Livewire\CustomerLogin\Orders;
 use App\Livewire\CustomerLogin\Profile;
 use App\Livewire\Admin\AdminSalesReport;
+use App\Livewire\CustomerLogin\Checkout;
 use App\Livewire\CustomerLogin\Location;
 use App\Livewire\CustomerLogin\Messages;
 use App\Livewire\CustomerLogin\Dashboard;
@@ -54,6 +55,9 @@ Route::middleware('customer')->group(function () {
 
     Route::get('/dashboard/view', ViewProduct::class)
     ->name('dashboard.view');
+
+    Route::get('/dashboard/checkout', Checkout::class)
+    ->name('dashboard.checkout');
 
     Route::get('/orders', Orders::class)
     ->name('customer-login.orders');

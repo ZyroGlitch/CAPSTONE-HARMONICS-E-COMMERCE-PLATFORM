@@ -221,6 +221,7 @@
 
     @if (request()->is('dashboard') ||
             request()->is('dashboard/view') ||
+            request()->is('dashboard/checkout') ||
             request()->is('orders') ||
             request()->is('messages') ||
             request()->is('location') ||
